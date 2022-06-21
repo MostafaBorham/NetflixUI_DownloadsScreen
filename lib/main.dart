@@ -1,5 +1,4 @@
-import 'package:brot_netflix_app/core/colours.dart';
-import 'package:brot_netflix_app/presentation/main_page/screen_main_page.dart';
+import 'package:brot_netflix_app/presentation/netflix_screen_downloads.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,15 +13,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Netflix App',
         theme: ThemeData(
-          scaffoldBackgroundColor: backgroundColour,
-          primarySwatch: Colors.blue,
-          fontFamily: GoogleFonts.montserrat().fontFamily,
-          textTheme: const TextTheme(
-              bodyText1: TextStyle(color: Colors.white),
-              bodyText2: TextStyle(color: Colors.white)),
-        ),
-        home: ScreenMainPage());
+            scaffoldBackgroundColor: Colors.black,
+            primarySwatch: Colors.blue,
+            fontFamily: GoogleFonts.montserrat().fontFamily,
+            appBarTheme: const AppBarTheme(
+              backgroundColor: Colors.black,
+            )),
+        home: const NetflixScreenDownloads());
   }
 }
